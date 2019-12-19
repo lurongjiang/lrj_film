@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: film
+  datasource:
+    username: lrj
+    password: Lu_11221015
+    url: jdbc:mysql:///film?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      username: ${spring.datasource.username}
+      password: ${spring.datasource.password}
+      jdbc-url: ${spring.datasource.url}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+#    Log
+logging:
+  level:
+    root: info
+    com.lrj.film: debug
+  file:
+    path: logs/
+    name: film.log
+#    Mybatis plus
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  global-config:
+    id-type: 0
+    db-column-underline: false
+    refresh-mapper: true

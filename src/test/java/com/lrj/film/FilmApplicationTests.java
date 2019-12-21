@@ -3,6 +3,7 @@ package com.lrj.film;
 import com.baomidou.mybatisplus.core.conditions.AbstractWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lrj.film.dao.entity.User;
 import com.lrj.film.dao.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,11 @@ class FilmApplicationTests {
         delete.eq("username","lisi");
         userMapper.delete(delete);
         userMapper.selectList(null).forEach(System.out::println);
+        System.out.println("---------------------apge----------------------");
+        Page<User> page = new Page<>();
+        page.setCurrent(1);
+        page.setSize(3);
+        userMapper.selectPage(page,null).getRecords().forEach(System.out::println);
     }
 
 }

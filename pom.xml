@@ -30,17 +30,19 @@
             <artifactId>mybatis-plus-generator</artifactId>
             <version>${mybatis.generator.version}</version>
         </dependency>
+
+        <!--mybatis plus generator-->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
             <version>${velocity.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis.plus.version}</version>
         </dependency>
+        <!--mybatis plus generator end-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -79,6 +81,31 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--swagger2-->
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <!--swagger2 end-->
+
+
+        <!-- fast json -->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
+        </dependency>
+        <!-- fast json end -->
     </dependencies>
 
     <build>

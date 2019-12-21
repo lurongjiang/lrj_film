@@ -17,7 +17,7 @@ import java.util.Map;
  */
 public class GeneratorTest {
     // 生成输出目录，定位到工程的java目录下
-    private String outputDir = "E:/projects/film/src/main/java";
+    private String outputDir = "E:/projects/mybatis-generator/src/main/java";
     // 生成类的作者
     private String author = "lrj";
     // 数据源相关配置
@@ -32,7 +32,7 @@ public class GeneratorTest {
 
     static {
         tableNames = new String[]{
-                "user"
+                "film_user"
         };
     }
 
